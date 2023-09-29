@@ -1,3 +1,5 @@
+###By Jaclyn Eissman, 2021
+
 #!/bin/bash
 #SBATCH--mail-user=jaclyn.m.eissman@vanderbilt.edu
 #SBATCH--mail-type=ALL
@@ -11,5 +13,6 @@
 #SBATCH--job-name=prep_UKBB_both_sexes_two
 #SBATCH--output=/data/h_vmac/eissmajm/UKBB/logfiles/both_sexes/B2_%A_%a.out
 
+#Run processing script for each line in text file
 both_sexes_file_list=$(cat /data/h_vmac/eissmajm/UKBB/Both_sexes_success_list_two.txt | awk -v line=$SLURM_ARRAY_TASK_ID '{if (NR == line) print $0}')
 sh /data/h_vmac/eissmajm/UKBB/format_munge_both_sexes.sh $both_sexes_file_list
