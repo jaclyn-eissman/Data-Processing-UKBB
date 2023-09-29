@@ -1,3 +1,5 @@
+###By Jaclyn Eissman, 2021
+
 #!/bin/bash
 cd /data/h_vmac/eissmajm/UKBB/females
 while read line ; do
