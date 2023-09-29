@@ -1,3 +1,5 @@
+###By Jaclyn Eissman, 2021
+
 #!/bin/bash
 cd /data/h_vmac/eissmajm/UKBB/both_sexes
 while read line ; do
